@@ -1,0 +1,31 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="pointer slds-var-p-around_small">
+        <div class="pointer">          
+                <img src={userImg} class="slds-align_absolute-center" alt="Partners">
+                <div class="slds-var-m-around_x-small">
+                    <div class="slds-var-m-around_x-small slds-align_absolute-center">
+                        <lightning-input type="text" label="Set the target for current FY" 
+                        placeholder="enter current FY Target..."  variant="label-hidden"
+                        onfocus={handleInputFocus} onblur={handleInputBlur}></lightning-input>
+                        
+                    </div>
+                    <h3 title="Actuals">
+                        <p class="slds-align_absolute-center actuals-highlight">
+                            Actuals: $000000
+                        </p>
+                    </h3>
+
+
+                    <h3 title=" Variance">
+                        <p class="slds-align_absolute-center variance-highlight">
+                            Variance: $(000000)
+                        </p>
+                    </h3>
+                    
+                </div>
+
+                
+        </div>
+    </div>
+</template>

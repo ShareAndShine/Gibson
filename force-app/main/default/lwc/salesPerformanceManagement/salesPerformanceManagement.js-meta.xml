@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LightningComponentBundle>
+  <apiVersion>55</apiVersion>
+  <description>An Application to help Sales Management setting up target and track progress  </description>
+  <isExposed>true</isExposed>
+  <masterLabel>Sales Performance Management</masterLabel>
+  <targets>
+    <target>lightning__AppPage</target>
+    <target>lightning__HomePage</target>
+    <target>lightning__RecordPage</target>
+  </targets>
+</LightningComponentBundle>

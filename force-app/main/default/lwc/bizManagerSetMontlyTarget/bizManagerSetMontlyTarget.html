@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+        <div slot="title">
+            <lightning-tabset active-tab-value="monthlyTarget" variant="scoped" class="tabset-1">
+                <lightning-tab label="Monthly Target" value="monthlyTarget">
+                    <lightning-layout pull-to-boundary="medium" multiple-rows="true">
+                        
+                    <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" 
+                    padding="horizontal-medium">
+                            <div class="slds-align_absolute-center title slds-var-p-around_xx-small">Amy Jackson (Business Development Manager)</div>
+                            <div class="slds-var-text-heading_x-small  slds-var-text-align_center" style="font-weight: bolder">
+                            <lightning-datatable hide-checkbox-column="true" 
+                            key-field="id" data={tableData3} columns={columns3} 
+                            default-sort-direction="asc" sorted-direction="asc" min-column-width="100"
+                             column-widths-mode="fixed"></lightning-datatable>
+                        </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-tab>
+                <lightning-tab label="SKU View" value="SKUView"></lightning-tab>
+            </lightning-tabset>
+        </div>
+    </lightning-card>
+</template>

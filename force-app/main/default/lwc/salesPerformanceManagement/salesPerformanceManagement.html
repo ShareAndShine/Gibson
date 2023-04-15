@@ -1,0 +1,166 @@
+<template>
+    <div>
+        <div class="slds-media slds-timeline__item_expandable">
+            <div class="slds-media__body">
+                <lightning-layout>
+                    <lightning-layout-item>
+                        <div class="avtemplate-group-selection">
+                            <div class="slds-card slds-card_boundary">
+                                <div class="slds-media slds-p-around_small slds-media_center slds-media_small slds-border_bottom">
+                                    <div class="slds-media__body">
+                                        <div class="div-2 slds-m-bottom_none slds-p-around_none slds-p-top_none slds-p-right_none slds-p-bottom_none slds-p-left_none slds-text-align_left slds-text-heading_medium">Jessica Garcia
+                                        </div>
+                                        <div class="div-2 slds-m-bottom_none slds-p-around_none slds-p-top_none slds-p-right_none slds-p-bottom_none slds-p-left_none slds-text-align_left">(Business Director)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="horizontal-medium" class="slds-m-top_small" size="10" small-device-size="10" medium-device-size="10" large-device-size="10">
+                        <lightning-card title="Target Vs Actuals" variant="base" icon-name="standard:actions_and_buttons">
+                            <div class="slds-card__body slds-card__body_inner">
+                                <lightning-layout pull-to-boundary="medium" multiple-rows="true" vertical-align="start">
+                                    <lightning-layout-item padding="horizontal-medium" class="slds-m-top_small" size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+                                        <div class="slds-box avtemplates-engagement-boxes">
+                                            <div class="div-10 slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">FY22 Actuals</div>
+                                            <div class="div-3 slds-text-heading_medium slds-m-top_x-small slds-text-align_center" style="font-weight: bolder">$100,000,000</div>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-medium" class="slds-m-top_small" size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+                                        <div class="slds-box avtemplates-engagement-boxes">
+                                            <div class="div-8 slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">FY24 Target</div>
+                                            <lightning-icon icon-name="action:edit" size="xx-small" variant="inverse" alternative-text="Edit Financial Year Target"></lightning-icon>
+                                            <div class="div-4 slds-text-heading_medium slds-m-top_x-small slds-text-align_center" style="font-weight: bolder">$ 120,000,000</div>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-medium" class="slds-m-top_small" size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+                                        <div class="slds-box avtemplates-engagement-boxes">
+                                            <div class="div-9 slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">FY23 Actuals (as on today)</div>
+                                            <div class="div-5 slds-text-heading_medium slds-m-top_x-small slds-text-align_center" style="font-weight: bolder">$ 500,000</div>
+                                        </div>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="horizontal-medium" class="slds-m-top_small" size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+                                        <div class="slds-box avtemplates-engagement-boxes">
+                                            <div class="div-7 slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">FY23 Variance (as on today)</div>
+                                            <div class="div-6 slds-text-heading_medium slds-m-top_x-small slds-text-align_center" style="font-weight: bolder">(1,148)</div>
+                                        </div>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                            </div>
+                        </lightning-card>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+    </div>
+    <lightning-layout pull-to-boundary="medium" multiple-rows="true">
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="3" padding="horizontal-medium">
+            <div class="slds-border_top">
+                <ul class="slds-has-dividers_around-space">
+                    <li class="slds-item">
+                        <lightning-layout pull-to-boundary="medium" multiple-rows="true" vertical-align="stretch">
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium">
+                                <lightning-card>
+                                    <h3 slot="title" class="h3-1">
+                                        <lightning-icon icon-name="standard:avatar" variant="inverse" size="small"></lightning-icon>John Doe
+                                    </h3>
+                                    <lightning-layout pull-to-boundary="medium" multiple-rows="true">
+                                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium">
+                                            <div class="slds-box avtemplates-engagement-boxes">
+                                                <div class="div-9 slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">FY23 Target Vs Actuals (as on today)</div>
+                                                <div class="div-5 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Target" value="50000" formatter="currency" variant="standard" class="input-1"></lightning-input>
+                                                </div>
+                                                <div class="div-4 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Actuals" disabled="true" value="20000" formatter="currency" variant="standard" class="input-2"></lightning-input>
+                                                </div>
+                                                <div class="div-6 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Variance" disabled="true" value="-30000" formatter="currency" variant="standard"></lightning-input>
+                                                </div>
+                                            </div>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+                                </lightning-card>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning-layout pull-to-boundary="medium" multiple-rows="true" vertical-align="stretch">
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium">
+                                <lightning-card>
+                                    <h3 slot="title" class="h3-1">
+                                        <lightning-icon icon-name="standard:avatar" size="x-small" variant="inverse"></lightning-icon>Mike Thompson
+
+                                    </h3>
+                                    <lightning-layout pull-to-boundary="medium" multiple-rows="true">
+                                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium">
+                                            <div class="slds-box avtemplates-engagement-boxes">
+                                                <div class="div-9 slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">FY23 Target Vs Actuals (as on today)</div>
+                                                <div class="div-5 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Target" value="25000" formatter="currency" variant="standard" class="input-1"></lightning-input>
+                                                </div>
+                                                <div class="div-4 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Actuals" disabled="true" value="20000" formatter="currency" variant="standard" class="input-2"></lightning-input>
+                                                </div>
+                                                <div class="div-6 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Variance" disabled="true" value="-5000" formatter="currency" variant="standard"></lightning-input>
+                                                </div>
+                                            </div>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+                                </lightning-card>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </li>
+                    <li class="slds-item">
+                        <lightning-layout pull-to-boundary="medium" multiple-rows="true" vertical-align="stretch">
+                            <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium">
+                                <lightning-card>
+                                    <h3 slot="title" class="h3-1">
+                                        <lightning-icon icon-name="standard:avatar" size="x-small" variant="inverse"></lightning-icon>Samantha Adams
+
+                                    </h3>
+                                    <lightning-layout pull-to-boundary="medium" multiple-rows="true">
+                                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium">
+                                            <div class="slds-box avtemplates-engagement-boxes">
+                                                <div class="div-9 slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">FY23 Target Vs Actuals (as on today)</div>
+                                                <div class="div-5 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Target" value="500000" formatter="currency" variant="standard" class="input-1"></lightning-input>
+                                                </div>
+                                                <div class="div-4 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Actuals" disabled="true" value="2000000" formatter="currency" variant="standard" class="input-2"></lightning-input>
+                                                </div>
+                                                <div class="div-6 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                                    <lightning-input type="number" name="input7" label="Variance" disabled="true" value="-300000" formatter="currency" variant="standard"></lightning-input>
+                                                </div>
+                                            </div>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+                                </lightning-card>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </li>
+                </ul>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="9" padding="horizontal-medium">
+            <lightning-card>
+                <div slot="title">
+                    <lightning-tabset active-tab-value="monthlyTarget" variant="scoped" class="tabset-1">
+                        <lightning-tab label="Monthly Target" value="monthlyTarget">
+                            <lightning-layout pull-to-boundary="medium" multiple-rows="true">
+                                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium"></lightning-layout-item>
+                                <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="12" padding="horizontal-medium">
+                                    <div class="div-6 slds-text-heading_x-small  slds-text-align_center" style="font-weight: bolder">
+                                    <lightning-datatable hide-checkbox-column="true" key-field="id" data={tableData3} columns={columns3} default-sort-direction="asc" sorted-direction="asc" min-column-width="100" column-widths-mode="auto"></lightning-datatable>
+                                </div>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </lightning-tab>
+                        <lightning-tab label="SKU View" value="SKUView"></lightning-tab>
+                    </lightning-tabset>
+                </div>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
