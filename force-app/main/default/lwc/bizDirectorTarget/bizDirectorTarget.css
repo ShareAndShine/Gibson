@@ -37,3 +37,9 @@
 {
     color: rgb(234, 115, 30);
 }
+
+.headertitle
+{
+    font-weight: bold;
+    font-size: large;
+}

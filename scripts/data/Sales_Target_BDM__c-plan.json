@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "Sales_Target_BDM__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Sales_Target_BDM__cs.json"
+        ]
+    }
+]

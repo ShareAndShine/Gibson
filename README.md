@@ -1,18 +1,24 @@
-# Salesforce DX Project: Next Steps
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+1. git clone https://github.com/ShareAndShine/Gibson.git
 
-## How Do You Plan to Deploy Your Changes?
+2. sfdx force:source:deploy -u <ReplaceWothOrgAliasName> -p force-app
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+3. sfdx force:user:permset:assign -n Sales_Performance_Management
 
-## Configure Your Salesforce DX Project
+4. Import Data
+sfdx force:data:tree:import -p scripts\data\Account-Contact-plan.json -u <ReplaceWothOrgAliasName>
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+sfdx force:data:tree:import -p scripts\data\Sales_Business_Unit__c-plan.json -u <ReplaceWothOrgAliasName>
 
-## Read All About It
+sfdx force:data:tree:import -p scripts\data\Sales_Target_BDD__c-plan.json -u <ReplaceWothOrgAliasName>
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+sfdx force:data:tree:import -p scripts\data\Sales_Target_BDM__c-plan.json -u <ReplaceWothOrgAliasName>
+
+
+
+ITEMS TO WORK ON:
+1. Excel Upload Option on BDD view - UI is done
+2. Previous Year Performance Report
+3. SKU Level Target Revision for BDMs
+4. BDM View as a tab
+	- Inlcude associates hirearchy

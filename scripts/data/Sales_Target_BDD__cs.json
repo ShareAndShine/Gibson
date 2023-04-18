@@ -1,0 +1,15 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Sales_Target_BDD__c",
+                "referenceId": "Sales_Target_BDD__cRef1"
+            },
+            "Name": "ST-0001",
+            "Current_FY__c": "2023-2024",
+            "Target__c": 500000,
+            "Actual__c": 100000,
+            "Total__c": null
+        }
+    ]
+}

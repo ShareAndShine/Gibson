@@ -1,0 +1,64 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef1"
+            },
+            "Name": "Rachel Jones",
+            "Title": "Business Development Director",
+            "Salutation": "Ms.",
+            "Gibson_Role__c": "Business Development Director",
+            "Gibson_Manager__c": null,
+            "AccountId": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef2"
+            },
+            "Name": "Amy Jackson",
+            "Title": "Business Development Manager",
+            "Salutation": "Ms.",
+            "Gibson_Role__c": "Business Development Manager",
+            "Gibson_Manager__c": "@ContactRef1",
+            "AccountId": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef3"
+            },
+            "Name": "Mike Thompson",
+            "Title": "Business Development Manager",
+            "Salutation": "Mr.",
+            "Gibson_Role__c": "Business Development Manager",
+            "Gibson_Manager__c": "@ContactRef1",
+            "AccountId": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef4"
+            },
+            "Name": "Sarah Johnson",
+            "Title": "Business Development Associate",
+            "Salutation": "Ms.",
+            "Gibson_Role__c": "Business Development Associate",
+            "Gibson_Manager__c": "@ContactRef2",
+            "AccountId": "@AccountRef1"
+        },
+        {
+            "attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef5"
+            },
+            "Name": "David Lee",
+            "Title": "Business Development Associate",
+            "Salutation": "Mr.",
+            "Gibson_Role__c": "Business Development Associate",
+            "Gibson_Manager__c": "@ContactRef3",
+            "AccountId": "@AccountRef1"
+        }
+    ]
+}

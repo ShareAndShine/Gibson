@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "Sales_Business_Unit__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Sales_Business_Unit__cs.json"
+        ]
+    }
+]

@@ -1,0 +1,53 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Sales_Business_Unit__c",
+                "referenceId": "Sales_Business_Unit__cRef1"
+            },
+            "Name": "Epiphone"
+        },
+        {
+            "attributes": {
+                "type": "Sales_Business_Unit__c",
+                "referenceId": "Sales_Business_Unit__cRef2"
+            },
+            "Name": "Acoustic"
+        },
+        {
+            "attributes": {
+                "type": "Sales_Business_Unit__c",
+                "referenceId": "Sales_Business_Unit__cRef3"
+            },
+            "Name": "Custom"
+        },
+        {
+            "attributes": {
+                "type": "Sales_Business_Unit__c",
+                "referenceId": "Sales_Business_Unit__cRef4"
+            },
+            "Name": "USA"
+        },
+        {
+            "attributes": {
+                "type": "Sales_Business_Unit__c",
+                "referenceId": "Sales_Business_Unit__cRef5"
+            },
+            "Name": "KRK"
+        },
+        {
+            "attributes": {
+                "type": "Sales_Business_Unit__c",
+                "referenceId": "Sales_Business_Unit__cRef6"
+            },
+            "Name": "Lifestyle"
+        },
+        {
+            "attributes": {
+                "type": "Sales_Business_Unit__c",
+                "referenceId": "Sales_Business_Unit__cRef7"
+            },
+            "Name": "Steinberger"
+        }
+    ]
+}

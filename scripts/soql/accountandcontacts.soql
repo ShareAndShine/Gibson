@@ -1,0 +1,1 @@
+Select id, Name, (Select Id, Name, title,Salutation, Gibson_role__c, Gibson_Manager__c from Contacts) from Account where name = 'Gibson'

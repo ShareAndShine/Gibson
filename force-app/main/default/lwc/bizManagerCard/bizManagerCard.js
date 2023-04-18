@@ -1,8 +1,17 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class BizManagerCard extends LightningElement {
 
     userImg = 'https://www.lightningdesignsystem.com/assets/images/avatar2.jpg';
+
+    // Sample data
+    /*bdmManager = {
+        userSalutation:"Ms.",
+        actual:"$100000", 
+        variance:"$100000"
+    };*/
+
+    @api bdmManager;
 
 
     handleInputFocus(event) {
@@ -19,7 +28,8 @@ export default class BizManagerCard extends LightningElement {
     
 
     connectedCallback() {
-        this.getuserImg("Ms.");
+        //using open api dynamically generate img  based on salutation 
+        this.getuserImg(this.bdmManager.userSalutation);
     }
 
     getuserImg(salutation) {
@@ -30,11 +40,11 @@ export default class BizManagerCard extends LightningElement {
 
         switch (salutation) {
             case "Mr.":
-                this.userImg = `https://randomuser.me/api/portraits/med/men/${randomId}.jpg`;
+                this.userImg = `https://randomuser.me/api/portraits/thumb/men/${randomId}.jpg`;
                 break;
             case "Ms.":
                 // code block
-                this.userImg = `https://randomuser.me/api/portraits/med/women/${randomId}.jpg`;
+                this.userImg = `https://randomuser.me/api/portraits/thumb/women/${randomId}.jpg`;
                 break;
             default:
                 this.userImg = 'https://www.lightningdesignsystem.com/assets/images/avatar2.jpg';

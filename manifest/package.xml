@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>Sales_Performance_Management</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
+		<members>Contact.Gibson_Manager__c</members>
+		<members>Contact.Gibson_Role__c</members>
+		<name>CustomField</name>
+	</types>
+	<types>
+		<members>Sales_Business_Unit__c</members>
+		<members>Sales_Target_BDD__c</members>
+		<members>Sales_Target_BDM__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Sales_Business_Unit__c</members>
+		<members>Sales_Target</members>
+		<members>Sales_Target1</members>
+		<members>Sales_Target_BDD__c</members>
+		<members>Sales_Target_BDM__c</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>Sales_Performance_Management_UtilityBar</members>
+		<members>Sales_Target</members>
+		<members>Sales_Target1</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
 		<members>salesPerformanceManagement</members>
 		<name>LightningComponentBundle</name>
+	</types>
+	<types>
+		<members>Contact.Gibson_Contacts</members>
+		<name>ListView</name>
+	</types>
+	<types>
+		<members>Sales_Performance_Management</members>
+		<name>PermissionSet</name>
 	</types>
 	<version>55.0</version>
 </Package>
