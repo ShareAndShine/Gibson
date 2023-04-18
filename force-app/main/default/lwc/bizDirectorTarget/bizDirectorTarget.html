@@ -27,11 +27,11 @@
                             <div class="c-container slds-align_absolute-center">
                                 <lightning-layout>
                                     <lightning-layout-item padding="around-small">
-                                        <div class="custom-box">
+                                        <div class="custom-box inputBox-width-extended">
                                             <lightning-input type="number" formatter="currency"
                                                 label="Option 1: Set the target for current FY"
                                                 placeholder="Enter current FY Target..." onfocus={handleInputFocus}
-                                                onblur={handleInputBlur}>
+                                                onblur={handleInputBlur} disabled="true">
                                             </lightning-input>
                                             <lightning-button-group class="slds-p-around_small">
                                                 <lightning-button label="Download Template"
