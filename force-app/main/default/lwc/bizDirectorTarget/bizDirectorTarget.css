@@ -12,7 +12,12 @@
 
 .inputBox-width
 {
-    width: 200px;
+    width: 250px;
+}
+
+.inputBox-width-extended
+{
+    width: 364px;
 }
 
 .c-container {
