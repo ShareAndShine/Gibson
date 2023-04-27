@@ -1,11 +1,24 @@
 <template>
     <lightning-layout multiple-rows horizontal-align="center">
-            <template for:each={businessDevelopmentManagers} for:item="BDManager">
-                <lightning-layout-item key={BDManager.Id} padding="around-small" size="12" small-device-size="12"
-                    large-device-size="12" medium-device-size="12">
-                    <c-biz-manager-card bdm-manager={BDManager}></c-biz-manager-card>                    
-                </lightning-layout-item>
+        <div class="row">
+            <template for:each={BDMList} for:item="item">
+                <template lwc:if={item.isSelected}>
+                    <div class="card card-selected" key={item.Id} data-id={item.Id} onclick={handleClick}>
+                        <lightning-layout-item padding="around-small" size="12" small-device-size="12"
+                            large-device-size="12" medium-device-size="12">
+                            <c-biz-manager-card bdm-manager={item}></c-biz-manager-card>
+                        </lightning-layout-item>
+                    </div>
+                </template>
+                <template lwc:else>
+                    <div class="card" key={item.Id} data-id={item.Id} onclick={handleClick}>
+                        <lightning-layout-item padding="around-small" size="12" small-device-size="12"
+                            large-device-size="12" medium-device-size="12">
+                            <c-biz-manager-card bdm-manager={item}></c-biz-manager-card>
+                        </lightning-layout-item>
+                    </div>
+                </template>
             </template>
-        
+        </div>
     </lightning-layout>
 </template>

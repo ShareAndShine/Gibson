@@ -1,9 +1,9 @@
 import { LightningElement, api, track, wire } from 'lwc';
-import getSalesTargetData from '@salesforce/apex/ExportDataController.getSalesTargetBDM';
+import getSalesOrderData from '@salesforce/apex/ExportDataController.getSalesOrderBDM';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { refreshApex } from '@salesforce/apex';
 
-export default class BizManagerSetMontlyTarget extends LightningElement {
+export default class BizManagerSetMonthlyOrder extends LightningElement {
     _contactId = '';
     wiredMyApexMethodResult;
 
@@ -49,7 +49,7 @@ export default class BizManagerSetMontlyTarget extends LightningElement {
         return !this.editMode;
     }
 
-    @wire(getSalesTargetData, { contactId: '$contactId' })
+    @wire(getSalesOrderData, { contactId: '$contactId' })
     wiredMyApexMethod(result) {
         this.wiredMyApexMethodResult = result;
         if (result.data) {

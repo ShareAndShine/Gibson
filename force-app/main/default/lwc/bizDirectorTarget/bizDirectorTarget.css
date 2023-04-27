@@ -10,41 +10,40 @@
     background-color: rgb(255 255 0);
 }
 
-.inputBox-width
-{
+.inputBox-width {
     width: 250px;
 }
 
-.inputBox-width-extended
-{
+.inputBox-width-extended {
     width: 364px;
 }
 
 .c-container {
-    border: 1px solid #d8dde6;
+    border: 1px solid #D2D2D2;
     margin: 10px 0 20px;
 }
 
 .custom-box {
     text-align: center;
-    background-color: #f4f6f9;
+    background-color: #ECF5FC;
     padding: 1rem;
-    border: 1px solid #d8dde6;
+    border: 1px solid #D2D2D2;
 }
 
-.actuals-highlight
-{
+.actuals-highlight {
     color: rgb(118, 118, 5);
-    
 }
 
-.variance-highlight
-{
+.variance-highlight {
     color: rgb(234, 115, 30);
 }
 
-.headertitle
-{
+.headertitle {
     font-weight: bold;
     font-size: large;
+}
+
+.box-highlight {
+    background: #FFFFFF;
+    border: 1px solid #D2D2D2;
 }

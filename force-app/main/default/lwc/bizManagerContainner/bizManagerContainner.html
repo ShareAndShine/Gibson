@@ -1,20 +1,14 @@
 <template>
     <lightning-layout>
-        <lightning-layout-item padding="around-small" size="2">
-            <div>
-                <!--<c-biz-manager-card></c-biz-manager-card>
-                <c-biz-manager-card></c-biz-manager-card>
-                <c-biz-manager-card></c-biz-manager-card>
-                <c-biz-manager-card></c-biz-manager-card>-->
-                <c-biz-manager-list></c-biz-manager-list>
-            </div>
+        <lightning-layout-item class="slds-align_absolute-center">
+            <lightning-combobox name="Regions" label="Regions" value={value} options={optionsRegion}
+                placeholder="Select a Region" onchange={handleChange}></lightning-combobox>
         </lightning-layout-item>
+    </lightning-layout>
 
-        <lightning-layout-item padding="around-small" size="10">
-            <div>
-                <c-biz-manager-set-montly-target></c-biz-manager-set-montly-target>
-            </div>
+    <lightning-layout>
+        <lightning-layout-item padding="around-small" style="padding-top:0px">
+            <c-biz-manager-target target-value={targetValue}></c-biz-manager-target>
         </lightning-layout-item>
-
-    </lightning-layout> 
+    </lightning-layout>
 </template>

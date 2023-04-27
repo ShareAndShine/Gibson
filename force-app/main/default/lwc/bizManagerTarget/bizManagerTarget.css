@@ -1,0 +1,36 @@
+.row {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.card {
+    margin-right: .75rem;
+    border: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+article.slds-card {
+    border: 1px solid #d1d1d1 !important;
+}
+
+.slds-card__header.slds-grid {
+    display: none !important;
+}
+
+.card-selected {
+    border: 1px solid #d1d1d1;
+    background: #ecf5fc;
+    border-radius: 2%;
+}
+
+.title {
+    padding: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,123 +1,215 @@
 .avtemplate-max-width_xxx-small {
     max-width: 48px;
-}.avtemplate-max-width_icon-large {
+}
+
+.avtemplate-max-width_icon-large {
     max-width: var(--lwc-squareIconLargeContent);
-}.avtemplate-linkedin-card__avatar_large {
+}
+
+.avtemplate-linkedin-card__avatar_large {
     width: 150px;
     height: 150px;
-}.avtemplate-linkedin-card__avatar_small {
+}
+
+.avtemplate-linkedin-card__avatar_small {
     width: 100px;
     height: 100px;
     opacity: .5;
-}.avtemplate-skills-learning__border-top {
+}
+
+.avtemplate-skills-learning__border-top {
     border-top: 8px solid;
     border-top-color: #5a1ba9;
-}.avtemplate-skills-learning__image_sizing{
+}
+
+.avtemplate-skills-learning__image_sizing {
     width: 55px;
     height: 55px;
-}.avtemplate-icon__background_success{
+}
+
+.avtemplate-icon__background_success {
     --sds-c-icon-color-background: #4bca81;
-}.div-1 {
+}
+
+.div-1 {
     border-color: #ba0517;
     color: #3a49da;
-}.avtemplate-time-sheet-details__tab_theme{
+}
+
+.avtemplate-time-sheet-details__tab_theme {
     --sds-c-tabs-item-color-border-active: white;
     --sds-c-tabs-list-color-border: #932d60;
     --sds-c-tabs-item-text-color-active: var(--lwc-colorTextInverse);
     --sds-c-tabs-item-text-color: var(--lwc-colorTextInverse);
     background: #ab2665;
     padding: 0;
-}.avtemplate-time-sheet-details__box_theme{
+}
+
+.avtemplate-time-sheet-details__box_theme {
     background: #ab2665;
     color: var(--lwc-colorTextInverse);
     padding: var(--lwc-spacingMedium);
-}.slds-show{
-    background:var(--lwc-colorBackground);
-}.avtemplate-icon__color_blue{
+}
+
+.slds-show {
+    background: var(--lwc-colorBackground);
+}
+
+.avtemplate-icon__color_blue {
     --sds-c-icon-color-foreground-default: var(--lwc-brandBackgroundPrimary);
-}.avtemplate-background_yellow-95 {
+}
+
+.avtemplate-background_yellow-95 {
     background-color: #fbf3e0;
-}.avtemplate-background_yellow-70 {
+}
+
+.avtemplate-background_yellow-70 {
     background-color: #e4a201;
-}.avtemplate-border-color_yellow-70 {
+}
+
+.avtemplate-border-color_yellow-70 {
     border-color: #e4a201;
-}.avtemplate-icon__color_yellow-70 {   
+}
+
+.avtemplate-icon__color_yellow-70 {
     --sds-c-icon-color-foreground-default: #e4a201;
-}.avtemplate-badge__background_yellow-70 {
+}
+
+.avtemplate-badge__background_yellow-70 {
     --sds-c-badge-color-background: #e4a201;
-}.avtemplate-badge__color_inverse {
+}
+
+.avtemplate-badge__color_inverse {
     --sds-c-badge-text-color: var(--lwc-colorTextInverse);
-}.avtemplate-badge__radius_medium {
+}
+
+.avtemplate-badge__radius_medium {
     --sds-c-badge-radius-border: var(--lwc-borderRadiusMedium);
-}.avtemplate-badge__background_success {
+}
+
+.avtemplate-badge__background_success {
     --sds-c-badge-color-background: #4bca81;
-}.avtemplate-icon__color_brand {
+}
+
+.avtemplate-icon__color_brand {
     --sds-c-icon-color-foreground-default: var(--lwc-colorBrand);
-}.avtemplate-badge__background_brand {
+}
+
+.avtemplate-badge__background_brand {
     --sds-c-badge-color-background: var(--lwc-colorBrand);
-}.avtemplate-color_teal-50 {
+}
+
+.avtemplate-color_teal-50 {
     color: #0b827c;
-}.avtemplate-icon__color_border {
+}
+
+.avtemplate-icon__color_border {
     --sds-c-icon-color-foreground-default: var(--lwc-colorBorder);
-}.avtemplate-email-engagement-prediction__table td, .avtemplate-email-engagement-prediction__table th {
+}
+
+.avtemplate-email-engagement-prediction__table td,
+.avtemplate-email-engagement-prediction__table th {
     padding: var(--lwc-spacingMedium);
     text-align: right;
     border: 1px solid var(--lwc-colorBorder);
-}.avtemplate-email-engagement-prediction__legend_y {
+}
+
+.avtemplate-email-engagement-prediction__legend_y {
     writing-mode: vertical-lr;
     position: absolute;
     transform: rotate(180deg) translateY(-50%);
     left: 0;
     bottom: 50%;
-}.avtemplate-email-engagement-prediction__legend_bottom-bar {
+}
+
+.avtemplate-email-engagement-prediction__legend_bottom-bar {
     height: 10px;
     background: linear-gradient(to left, #1ab9ff, #eaf5fe);
     border-radius: var(--lwc-borderRadiusLarge);
-}.avtemplate-email-engagement-prediction__table th {
+}
+
+.avtemplate-email-engagement-prediction__table th {
     font-weight: normal;
-}.avtemplate-email-engagement-prediction__cell_4 {
+}
+
+.avtemplate-email-engagement-prediction__cell_4 {
     background-color: #1ab9ff;
-}.avtemplate-email-engagement-prediction__cell_3 {
+}
+
+.avtemplate-email-engagement-prediction__cell_3 {
     background-color: #90d0fe;
-}.avtemplate-email-engagement-prediction__cell_2 {
+}
+
+.avtemplate-email-engagement-prediction__cell_2 {
     background-color: #cfe9fe;
-}.avtemplate-email-engagement-prediction__cell_1 {
+}
+
+.avtemplate-email-engagement-prediction__cell_1 {
     background-color: #eaf5fe;
-}.avtemplates-engagement-boxes {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	min-height: 7rem;
-}.tabset-1 {
+}
+
+.avtemplates-engagement-boxes {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 7rem;
+}
+
+.tabset-1 {
     --sds-c-tabs-list-color-border: #181818;
     --sds-c-tabs-item-text-color: #1b96ff;
-}@media (min-width: 64em) {.div-2 {
+}
+
+@media (min-width: 64em) {
+    .div-2 {
         color: #e3066a;
-    }.div-3 {
+    }
+
+    .div-3 {
         color: #aeaeae;
-    }.div-4 {
+    }
+
+    .div-4 {
         color: #41b658;
-    }.div-5 {
+    }
+
+    .div-5 {
         color: #f38303;
-    }.div-6 {
+    }
+
+    .div-6 {
         color: #d83a00;
-    }.div-7 {
+    }
+
+    .div-7 {
         color: #aa3001;
-    }.div-8 {
+    }
+
+    .div-8 {
         color: #45c65a;
         font-style: italic;
-    }.div-9 {
+    }
+
+    .div-9 {
         color: #f38303;
         text-decoration: underline;
-    }.div-10 {
+    }
+
+    .div-10 {
         color: #747474;
-    }.input-1 {
+    }
+
+    .input-1 {
         --sds-c-input-text-color: #41b658;
-    }.input-2 {
+    }
+
+    .input-2 {
         --sds-c-input-text-color: #f38303;
         --sds-c-input-text-color-focus: #d79304;
-    }.h3-1 {
+    }
+
+    .h3-1 {
         font-weight: 700;
     }
 }

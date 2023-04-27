@@ -1,0 +1,154 @@
+<template>
+    <lightning-card>
+        <lightning-tabset active-tab-value="monthlyTarget" variant="scoped" class="tabset-1">
+            <lightning-tab label="Monthly" value="monthlyTarget">
+                <lightning-layout>
+                    <div class="row">
+                        <template for:each={BDManagers} for:item="item">
+                            <template lwc:if={item.isSelected}>
+                                <div class="card card-selected" key={item.Id} data-id={item.Id} onclick={handleClick}>
+                                    <lightning-layout-item padding="around-small" size="12" small-device-size="12"
+                                        large-device-size="12" medium-device-size="12">
+                                        <c-biz-manager-card target-value={targetYearValue}
+                                            bdm-manager={item}></c-biz-manager-card>
+                                    </lightning-layout-item>
+                                </div>
+                            </template>
+                            <template lwc:else>
+                                <div class="card" key={item.Id} data-id={item.Id} onclick={handleClick}>
+                                    <lightning-layout-item padding="around-small" size="12" small-device-size="12"
+                                        large-device-size="12" medium-device-size="12">
+                                        <c-biz-manager-card target-value={targetYearValue}
+                                            bdm-manager={item}></c-biz-manager-card>
+                                    </lightning-layout-item>
+                                </div>
+                            </template>
+                        </template>
+                    </div>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item class="slds-align_absolute-center" size="12"
+                        style="padding-top: 8px;padding-bottom: 8px;">
+                        <template lwc:if={isEditMode}>
+                            <lightning-button label="Save" title="Save" onclick={handleClickEdit}
+                                class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button label="Cancel" title="Cancel" onclick={handleClickEdit}
+                                class="slds-m-left_x-small"></lightning-button>
+                        </template>
+
+                        <template lwc:else>
+                            <lightning-button label="Edit" title="Edit" onclick={handleClickEdit}
+                                class="slds-m-left_x-small"></lightning-button>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <lightning-card class="card-box">
+                            <div class="title">Target</div>
+                            <template lwc:if={contactExists}>
+                                <c-biz-manager-set-montly-target contact-id={contactId}
+                                    edit-mode={isEditMode}></c-biz-manager-set-montly-target>
+                            </template>
+                        </lightning-card>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <lightning-card class="card-box">
+                            <div class="title">Order</div>
+                            <template lwc:if={contactExists}>
+                                <c-biz-manager-set-monthly-order
+                                    contact-id={contactId}></c-biz-manager-set-monthly-order>
+                            </template>
+                        </lightning-card>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <lightning-card class="card-box">
+                            <div class="title">Variance</div>
+                            <template lwc:if={contactExists}>
+                                <c-biz-manager-set-monthly-variance
+                                    contact-id={contactId}></c-biz-manager-set-monthly-variance>
+                            </template>
+                        </lightning-card>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-tab>
+
+            <lightning-tab label="Quarterly" value="QuarterlyTarget">
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <lightning-layout multiple-rows horizontal-align="center">
+                            <div class="row">
+                                <template for:each={BDMList} for:item="item">
+                                    <template lwc:if={item.isSelected}>
+                                        <div class="card card-selected" key={item.Id} data-id={item.Id}
+                                            onclick={handleClick}>
+                                            <lightning-layout-item padding="around-small" size="12"
+                                                small-device-size="12" large-device-size="12" medium-device-size="12">
+                                                <c-biz-manager-card target-value={targetYearValue}
+                                                    bdm-manager={item}></c-biz-manager-card>
+                                            </lightning-layout-item>
+                                        </div>
+                                    </template>
+                                    <template lwc:else>
+                                        <div class="card" key={item.Id} data-id={item.Id} onclick={handleClick}>
+                                            <lightning-layout-item padding="around-small" size="12"
+                                                small-device-size="12" large-device-size="12" medium-device-size="12">
+                                                <c-biz-manager-card target-value={targetYearValue}
+                                                    bdm-manager={item}></c-biz-manager-card>
+                                            </lightning-layout-item>
+                                        </div>
+                                    </template>
+                                </template>
+                            </div>
+                        </lightning-layout>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <lightning-layout>
+                    <lightning-layout-item class="slds-align_absolute-center" size="12"
+                        style="padding-top: 8px;padding-bottom: 8px;">
+                        <template lwc:if={isEditMode}>
+                            <lightning-button label="Save" title="Save" onclick={handleClickEdit}
+                                class="slds-m-left_x-small"></lightning-button>
+                            <lightning-button label="Cancel" title="Cancel" onclick={handleClickEdit}
+                                class="slds-m-left_x-small"></lightning-button>
+                        </template>
+
+                        <template lwc:else>
+                            <lightning-button label="Edit" title="Edit" onclick={handleClickEdit}
+                                class="slds-m-left_x-small"></lightning-button>
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <div>
+                            <template lwc:if={contactExists}>
+                                <c-biz-manager-set-quarterly-target contact-id={contactId}
+                                    edit-mode={isEditMode}></c-biz-manager-set-quarterly-target>
+                            </template>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-tab>
+
+            <lightning-tab label="SKU View" value="SKUView">
+                <lightning-layout>
+                    <lightning-layout-item size="12">
+                        <div>
+                            <template lwc:if={contactExists}>
+                                <c-biz-manager-product-view contact-id={contactId}></c-biz-manager-product-view>
+                            </template>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+            </lightning-tab>
+        </lightning-tabset>
+    </lightning-card>
+</template>

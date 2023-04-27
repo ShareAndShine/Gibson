@@ -2,102 +2,101 @@
 <template>
     <lightning-layout horizontal-align="center">
         <lightning-layout-item padding="horizontal-small">
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="5">
+                    <p class="headertitle">Welcome, {BDDName}
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-combobox name="Financial Year" label="Financial Year" value={valueFY} options={optionsFY}
+                        onchange={handleChange}></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
 
             <lightning-layout>
-                <lightning-layout-item padding="around-small" size="3">
-                    <p class="headertitle">Welecome, {BDDName}
-                    </p>
-                    <br />
+                <lightning-layout-item padding="around-small" size="12">
                     <p><b>{currentFY} Target Setting | Set Targets and Track Progress in Real-Time</b>
                     </p>
                     <p>
                         Sales planning screen is designed to help streamline sales planning process by setting
-                        monthly or quarterly targets for all Business managers in the current fiscal year. Additionally, it helps
+                        monthly or quarterly targets for all Business managers in the current fiscal year. Additionally,
+                        it helps
                         with real-time tracking of actuals against the targets and variances, to make data-driven
                         decisions and adjust strategies accordingly.
                     </p>
-
-                </lightning-layout-item>
-                <lightning-layout-item padding="around-small" size="9">
-                    <lightning-layout vertical-align="center">
-
-                        <lightning-layout-item padding="around-small slds-m-around_medium" size="12">
-
-
-                            <div class="c-container slds-align_absolute-center">
-                                <lightning-layout>
-                                    <lightning-layout-item padding="around-small">
-                                        <div class="custom-box inputBox-width-extended">
-                                            <lightning-input type="number" formatter="currency"
-                                                label="Option 1: Set the target for current FY"
-                                                placeholder="Enter current FY Target..." onfocus={handleInputFocus}
-                                                onblur={handleInputBlur} disabled="true">
-                                            </lightning-input>
-                                            <lightning-button-group class="slds-p-around_small">
-                                                <lightning-button label="Download Template"
-                                                    icon-name="action:download"></lightning-button>
-                                                <lightning-button label="Upload Target"
-                                                    icon-name="action:upload"></lightning-button>
-                                            </lightning-button-group>
-                                        </div>
-                                    </lightning-layout-item>
-                                    <lightning-layout-item padding="around-small">
-
-
-                                        <div class="custom-box inputBox-width">
-                                            <lightning-input type="number" formatter="currency"
-                                                label="Option 2: Set the target for current FY"
-                                                placeholder="Enter current FY Target..." onfocus={handleInputFocus}
-                                                onblur={handleInputBlur}>
-                                            </lightning-input>
-
-                                            <lightning-button-group class="slds-p-around_small">
-                                                <lightning-button label="Refresh"></lightning-button>
-                                                <lightning-button label="Save"
-                                                    icon-name="utility:save"></lightning-button>
-                                            </lightning-button-group>
-
-
-                                        </div>
-                                    </lightning-layout-item>
-                                    <lightning-layout-item padding="around-small">
-                                        <div class="custom-box">
-                                            <div class="slds-p-around_small slds-align_absolute-center">
-
-                                                <div class="slds-box">
-                                                    <div class="slds-text-heading_x-small slds-text-align_center"
-                                                        style="font-weight: bold">FY22 Actuals</div>
-                                                    <div class="slds-text-heading_medium slds-m-top_x-small slds-text-align_center"
-                                                        style="font-weight: bolder">$100,000,000</div>
-                                                </div>
-
-                                                <div class="slds-box">
-                                                    <div class="actuals-highlight slds-text-heading_x-small slds-text-align_center"
-                                                        style="font-weight: bold">FY23 Actuals</div>
-                                                    <div class="actuals-highlight slds-text-heading_medium slds-m-top_x-small slds-text-align_center"
-                                                        style="font-weight: bolder">$500,0000</div>
-                                                </div>
-                                                <div class="slds-box">
-                                                    <div class="variance-highlight slds-text-heading_x-small slds-text-align_center"
-                                                        style="font-weight: bold">FY23 Variance</div>
-                                                    <div class="variance-highlight slds-text-heading_medium slds-m-top_x-small slds-text-align_center"
-                                                        style="font-weight: bolder">$(112,148)</div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </lightning-layout-item>
-
-                                </lightning-layout>
-                            </div>
-
-                        </lightning-layout-item>
-
-                    </lightning-layout>
-
                 </lightning-layout-item>
             </lightning-layout>
+        </lightning-layout-item>
+    </lightning-layout>
 
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item padding="horizontal-small" size="12">
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="4">
+                    <div class="custom-box slds">
+                        <lightning-input type="number" formatter="currency"
+                            label="Option 1: Set the target for current FY" placeholder="Enter current FY Target..."
+                            onfocus={handleInputFocus} onblur={handleInputBlur} disabled="true">
+                        </lightning-input>
+                        <!-- <div class="slds-p-around_small slds_align_absolute-center">
+                            <lightning-button style="float: left;" label="Download" icon-name="action:download"
+                                onclick={downloadCSVFile}>
+                            </lightning-button>
+                            <lightning-input icon-name="action:upload" type="file" onclick={readCSVFile}>
+                            </lightning-input>
+                        </div> -->
+
+                        <lightning-button-group class="slds-p-around_small slds_align_absolute-center">
+                            <lightning-button label="Download" style="float: left;" icon-name="action:download"
+                                onclick={downloadCSVFile}>
+                            </lightning-button>
+                            <lightning-button label="Upload" style="float: left;" icon-name="action:upload">
+                            </lightning-button>
+                        </lightning-button-group>
+                    </div>
+                </lightning-layout-item>
+
+                <lightning-layout-item padding="around-small" size="3">
+                    <div class="custom-box slds">
+                        <lightning-input type="number" formatter="currency"
+                            label="Option 2: Set the target for current FY" placeholder="Enter current FY Target..."
+                            onfocus={handleInputFocus} onblur={handleInputBlur} value={currentFYValue}
+                            onchange={handleFYValue}>
+                        </lightning-input>
+                        <!-- <c-biz-manager-card current-value-import={currentFYValue}></c-biz-manager-card> -->
+
+                        <lightning-button-group class="slds-p-around_small">
+                            <lightning-button label="Refresh" icon-name="action:refresh"></lightning-button>
+                            <lightning-button label="Save" icon-name="utility:save"></lightning-button>
+                        </lightning-button-group>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="5">
+                    <div class="custom-box slds">
+                        <div class="slds-p-around_small slds-align_absolute-center">
+                            <div class="slds-box box-highlight" style="margin-right: 16px">
+                                <div class="slds-text-heading_x-small slds-text-align_center" style="font-weight: bold">
+                                    FY22 Actuals</div>
+                                <div class="slds-text-heading_medium slds-m-top_x-small slds-text-align_center"
+                                    style="font-weight: bolder">$10.7M</div>
+                            </div>
+
+                            <div class="slds-box box-highlight" style="margin-right: 16px">
+                                <div class="actuals-highlight slds-text-heading_x-small slds-text-align_center"
+                                    style="font-weight: bold">FY23 Actuals</div>
+                                <div class="actuals-highlight slds-text-heading_medium slds-m-top_x-small slds-text-align_center"
+                                    style="font-weight: bolder">$6.4M</div>
+                            </div>
+                            <div class="slds-box box-highlight">
+                                <div class="variance-highlight slds-text-heading_x-small slds-text-align_center"
+                                    style="font-weight: bold">FY23 Variance</div>
+                                <div class="variance-highlight slds-text-heading_medium slds-m-top_x-small slds-text-align_center"
+                                    style="font-weight: bolder">$(4.3M)</div>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
         </lightning-layout-item>
 
     </lightning-layout>

@@ -1,18 +1,32 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, track } from 'lwc';
 
 export default class BizManagerCard extends LightningElement {
 
     userImg = 'https://www.lightningdesignsystem.com/assets/images/avatar2.jpg';
 
-    // Sample data
-    /*bdmManager = {
-        userSalutation:"Ms.",
-        actual:"$100000", 
-        variance:"$100000"
-    };*/
-
     @api bdmManager;
+    @api targetValue = 0;
 
+    @track actual = 0;
+    @track variance = 0;
+
+    connectedCallback() {
+        this.actual = this.bdmManager.actual;
+        this.variance = '$' + this.bdmManager.variance;
+    }
+
+    handleChange(event) {
+        console.log(event.detail.value);
+        let varianceVal = this.actual - Number(event.detail.value);
+        if (varianceVal < 0) {
+            this.variance = '$(' + (-1 * varianceVal) + ')';
+        }
+        else {
+            this.variance = '$(' + varianceVal + ')';
+        }
+
+        //this.bdmManager.variance = event.detail.value;
+    }
 
     handleInputFocus(event) {
         // modify parent to properly highlight visually
@@ -25,17 +39,14 @@ export default class BizManagerCard extends LightningElement {
         const classList = event.target.parentNode.classList;
         classList.remove('lgc-highlight');
     }
-    
+
 
     connectedCallback() {
         //using open api dynamically generate img  based on salutation 
-        this.getuserImg(this.bdmManager.userSalutation);
+        this.getuserImg(this.bdmManager.Salutation);
     }
 
     getuserImg(salutation) {
-
-        // Generate a random number between 1 and 100
-
         const randomId = Math.floor(Math.random() * 100);
 
         switch (salutation) {

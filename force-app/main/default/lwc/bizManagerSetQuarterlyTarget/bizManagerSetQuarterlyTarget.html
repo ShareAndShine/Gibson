@@ -1,0 +1,144 @@
+<template>
+    <!-- <lightning-datatable hide-checkbox-column="true" key-field="id" data={salesTargetData}
+        columns={columns}></lightning-datatable> -->
+
+    <div style="padding-top: 8px">
+        <table class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols"
+            style="font-size: 14px;">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <template for:each={columns} for:item="column">
+                        <th key={column.fieldName} class="slds-is-resizable slds-is-sortable slds-cell_action-mode"
+                            style="height: 40px;">
+                            <a class="slds-th__action slds-text-link_reset">
+                                <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                    <span class="slds-truncate" title="Business Unit / Month">{column.label}</span>
+                                </div>
+                            </a>
+                            <div class="slds-resizable">
+                                <span class="slds-resizable__handle">
+                                    <span class="slds-resizable__divider"></span>
+                                </span>
+                            </div>
+                        </th>
+                    </template>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={salesTargetData} for:item="data">
+                    <tr key={data.id} class="slds-hint-parent" style="height: 40px;">
+                        <template lwc:if={data.isFirst}>
+                            <th class="slds-cell_action-mode" scope="row">
+                                <div class="slds-truncate">
+                                    <a tabindex="0">{data.busUnit}</a>
+                                </div>
+                            </th>
+
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <template lwc:if={editMode}>
+                                    <lightning-input type="number" value={data.Q1} formatter="currency"
+                                        step="0.01"></lightning-input>
+                                </template>
+                                <template lwc:else>
+                                    <div class="slds-truncate" style="text-align: right;">
+                                        <!-- $<lightning-formatted-number value={data.Apr} format-style="decimal"
+                                                minimum-fraction-digits="2"
+                                                maximum-fraction-digits="2"></lightning-formatted-number> -->
+                                        ${data.Q1Data}
+                                    </div>
+                                </template>
+                            </td>
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <template lwc:if={editMode}>
+                                    <lightning-input type="number" value={data.Q2} formatter="currency"
+                                        step="0.01"></lightning-input>
+                                </template>
+                                <template lwc:else>
+                                    <div class="slds-truncate" style="text-align: right;">
+                                        <!-- $<lightning-formatted-number value={data.May} format-style="decimal"
+                                                minimum-fraction-digits="2"
+                                                maximum-fraction-digits="2"></lightning-formatted-number> -->
+                                        ${data.Q2Data}
+                                    </div>
+                                </template>
+                            </td>
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <template lwc:if={editMode}>
+                                    <lightning-input type="number" value={data.Q3} formatter="currency"
+                                        step="0.01"></lightning-input>
+                                </template>
+                                <template lwc:else>
+                                    <div class="slds-truncate" style="text-align: right;">
+                                        <!-- $<lightning-formatted-number value={data.Jun} format-style="decimal"
+                                                minimum-fraction-digits="2"
+                                                maximum-fraction-digits="2"></lightning-formatted-number> -->
+                                        ${data.Q3Data}
+                                    </div>
+                                </template>
+                            </td>
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <template lwc:if={editMode}>
+                                    <lightning-input type="number" value={data.Q4} formatter="currency"
+                                        step="0.01"></lightning-input>
+                                </template>
+                                <template lwc:else>
+                                    <div class="slds-truncate" style="text-align: right;">
+                                        <!-- $<lightning-formatted-number value={data.Jul} format-style="decimal"
+                                                                                    minimum-fraction-digits="2"
+                                                                                    maximum-fraction-digits="2"></lightning-formatted-number> -->
+                                        ${data.Q4Data}
+                                    </div>
+                                </template>
+                            </td>
+
+                            <template lwc:if={editMode}></template>
+                            <template lwc:else>
+                                <td class="slds-cell_action-mode" role="gridcell">
+                                    <div class="slds-truncate" style="text-align: right;font-weight: bolder;">
+                                        ${data.totalData}
+                                    </div>
+                                </td>
+                            </template>
+                        </template>
+
+                        <template lwc:elseif={editLastRow}>
+                            <th class="slds-cell_action-mode" scope="row">
+                                <div class="slds-truncate">
+                                    <a tabindex="0">{data.busUnit}</a>
+                                </div>
+                            </th>
+
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <div class="slds-truncate" style="text-align: right;font-weight: bolder;">
+                                    ${data.Q1Data}
+                                </div>
+                            </td>
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <div class="slds-truncate" style="text-align: right;font-weight: bolder;">
+                                    ${data.Q2Data}
+                                </div>
+                            </td>
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <div class="slds-truncate" style="text-align: right;font-weight: bolder;">
+                                    ${data.Q3Data}
+                                </div>
+                            </td>
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <div class="slds-truncate" style="text-align: right;font-weight: bolder;">
+                                    ${data.Q4Data}
+                                </div>
+                            </td>
+
+                            <td class="slds-cell_action-mode" role="gridcell">
+                                <div class="slds-truncate" style="text-align: right;font-weight: bolder;">
+                                    ${data.totalData}
+                                </div>
+                            </td>
+                        </template>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+
+    </div>
+</template>
